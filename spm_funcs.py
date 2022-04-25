@@ -16,8 +16,6 @@ or better, in IPython::
 
     %run spm_funcs.py
 """
-# Python 2 compatibility
-from __future__ import print_function, division
 
 import numpy as np
 
@@ -62,7 +60,7 @@ def get_spm_globals(fname):
 
 def main():
     # This function run when file executed as a script
-    bold_fname = nipraxis.fetch_file('ds114_sub009_t2r1.nii')
+    bold_fname = nipraxis.fetch_file('ds107_sub012_t1r2.nii')
     glob_vals = get_spm_globals(bold_fname)
     expected_values = np.loadtxt('global_signals.txt')
     if np.allclose(glob_vals, expected_values, rtol=1e-4):
