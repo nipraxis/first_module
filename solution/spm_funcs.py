@@ -72,6 +72,8 @@ def main():
     # This function run when file executed as a script
     bold_fname = nipraxis.fetch_file('ds107_sub012_t1r2.nii')
     glob_vals = get_spm_globals(bold_fname)
+    if glob_vals is None:
+        raise ValueError('Did you return your global values?')
     expected_values = np.loadtxt('global_signals.txt')
     if np.allclose(glob_vals, expected_values, rtol=1e-4):
         print('OK: your values and SPMs are close')
