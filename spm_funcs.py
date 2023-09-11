@@ -54,6 +54,7 @@ def get_spm_globals(fname):
         spm_vals.append(spm_global(vol))
     return spm_vals
 
+
     """ Calculate SPM global metrics for volumes in image filename `fname`
 
     
