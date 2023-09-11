@@ -17,6 +17,10 @@ or better, in IPython::
     %run spm_funcs.py
 """
 
+
+
+
+
 import numpy as np
 
 import nibabel as nib
